@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Launchpad — Your starting line for a licensed home daycare</title>
+    <title>Launchpad - Your starting line for a licensed home daycare</title>
     <meta
       name="description"
       content="Answer five quick questions and get a personalized roadmap for opening a licensed home daycare, grounded in Wonderschool's own guides."
@@ -39,8 +39,15 @@
       </div>
 
       <header class="brand">
-        <span class="brand__dot" aria-hidden="true"></span>
-        Launchpad
+        <div class="brand__left">
+          <span class="brand__dot" aria-hidden="true"></span>
+          a demo for <span class="brand__wonderschool">Wonderschool</span> by Helen
+        </div>
+        <nav class="brand__links">
+          <a href="https://github.com/HelenHighwater1/wonderschool#hey-wonderschool-team" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+          <span class="brand__links-divider" aria-hidden="true">·</span>
+          <a href="https://heyimhelen.com" target="_blank" rel="noopener noreferrer">Helen's Portfolio</a>
+        </nav>
       </header>
 
       <!-- Screen 1 — Welcome -->
@@ -55,7 +62,7 @@
             A demo built <span class="headline__accent">just for you.</span>
           </h1>
           <p class="lede">
-            This is Launchpad — a RAG-powered coaching tool that helps aspiring
+            This is a RAG-powered coaching tool that helps aspiring
             home daycare educators figure out how to get licensed. Answer five
             quick questions and it builds a personalized, step-by-step roadmap
             grounded in Wonderschool's own guides. Try it out!
@@ -243,16 +250,12 @@
                   </svg>
                 </span>
               </button>
-              <a
-                id="cta-wonderschool"
-                class="cta cta--secondary"
-                href="https://wonderschool.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Start your program with Wonderschool
-              </a>
             </div>
+            <p class="roadmap__disclaimer">
+              This is a demo only and should not be used as the basis for starting
+              a child care business. Always verify licensing requirements directly
+              with your state agency.
+            </p>
             <button id="cta-start-over" type="button" class="roadmap__start-over">
               Start over
             </button>

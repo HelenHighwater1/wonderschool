@@ -106,7 +106,7 @@ a {
 }
 
 .bg-shape {
-  position: absolute;
+  position: fixed;
   pointer-events: none;
   z-index: 0;
   filter: blur(0.5px);
@@ -142,16 +142,49 @@ a {
 
 .brand {
   position: fixed;
-  top: 28px;
-  left: 36px;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 36px;
   font-weight: 700;
   font-size: 15px;
   letter-spacing: 0.02em;
   color: var(--plum);
-  display: inline-flex;
+}
+
+.brand__left {
+  display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.brand__links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.brand__links a {
+  color: var(--plum-soft);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: transparent;
+  transition: color 180ms var(--ease-out), text-decoration-color 180ms var(--ease-out);
+}
+
+.brand__links a:hover {
+  color: var(--plum);
+  text-decoration-color: var(--coral);
+}
+
+.brand__links-divider {
+  color: var(--line-strong);
 }
 
 .brand__dot {
@@ -161,6 +194,10 @@ a {
   border-radius: 50%;
   background: var(--coral);
   box-shadow: 4px 0 0 var(--mustard);
+}
+
+.brand__wonderschool {
+  color: var(--coral);
 }
 
 /* =========================================================================
@@ -265,7 +302,7 @@ a {
   padding: 14px 18px 14px 28px;
   background: var(--plum);
   color: #fff;
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-md);
   font-weight: 700;
   font-size: 17px;
   letter-spacing: 0.005em;
@@ -372,7 +409,7 @@ a {
   background: rgba(212, 178, 84, 0.14);
   color: var(--plum-deep);
   border: 1.5px dashed var(--mustard);
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-md);
   font-weight: 600;
   font-size: 13px;
   letter-spacing: 0.01em;
@@ -469,7 +506,7 @@ a {
   background: var(--surface);
   color: var(--plum-deep);
   border: 1.5px solid var(--line-strong);
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-md);
   font-weight: 600;
   font-size: 14px;
   line-height: 1.2;
@@ -920,7 +957,7 @@ a {
   background: transparent;
   color: var(--plum);
   border: 1.5px solid var(--plum);
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-md);
   font-weight: 700;
   font-size: 15px;
   text-decoration: none;
@@ -933,6 +970,16 @@ a {
   background: rgba(103, 41, 63, 0.06);
   transform: translateY(-1px);
 }
+
+.roadmap__disclaimer {
+  font-size: 12px;
+  color: var(--text-soft);
+  margin: 0;
+  line-height: 1.5;
+  max-width: 52ch;
+  text-align: center;
+}
+
 
 .roadmap__start-over {
   font-size: 14px;
