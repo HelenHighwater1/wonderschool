@@ -197,6 +197,7 @@ async def api_roadmap(intake: Intake) -> RoadmapResponse:
     user_msg = build_roadmap_user_message(intake.model_dump(), chunks)
 
     client = get_anthropic()
+    raw_text = ""
     try:
         msg = client.messages.create(
             model=CLAUDE_MODEL,
@@ -208,6 +209,11 @@ async def api_roadmap(intake: Intake) -> RoadmapResponse:
         raw_text = anthropic_first_text(msg)
         data = parse_json_loose(raw_text)
     except Exception:
+        logger.exception(
+            "Roadmap generation failed (state=%s, raw_text_head=%r)",
+            intake.state,
+            raw_text[:300],
+        )
         raise HTTPException(
             status_code=502,
             detail="We had trouble building your roadmap. Try again.",
@@ -230,6 +236,12 @@ async def api_roadmap(intake: Intake) -> RoadmapResponse:
         )
 
     if len(steps_out) < 5:
+        logger.error(
+            "Roadmap returned only %d valid steps (state=%s, raw_steps=%d)",
+            len(steps_out),
+            intake.state,
+            len(raw_steps),
+        )
         raise HTTPException(
             status_code=502,
             detail="We had trouble building your roadmap. Try again.",
@@ -267,6 +279,7 @@ async def api_chat(req: ChatRequest) -> ChatResponse:
     user_msg = build_chat_user_message(q, req.intake.model_dump(), hist, chunks)
 
     client = get_anthropic()
+    raw_text = ""
     try:
         msg = client.messages.create(
             model=CLAUDE_MODEL,
@@ -278,6 +291,11 @@ async def api_chat(req: ChatRequest) -> ChatResponse:
         raw_text = anthropic_first_text(msg)
         data = parse_json_loose(raw_text)
     except Exception:
+        logger.exception(
+            "Chat generation failed (state=%s, raw_text_head=%r)",
+            req.intake.state,
+            raw_text[:300],
+        )
         raise HTTPException(
             status_code=502,
             detail="We couldn't answer that right now. Try again.",
@@ -285,6 +303,7 @@ async def api_chat(req: ChatRequest) -> ChatResponse:
 
     answer = str(data.get("answer") or "").strip()
     if not answer:
+        logger.error("Chat returned empty answer (state=%s)", req.intake.state)
         raise HTTPException(
             status_code=502,
             detail="We couldn't answer that right now. Try again.",
