@@ -236,7 +236,7 @@
   function startLoadingAnimation(state) {
     if (loadingInterval) clearInterval(loadingInterval);
     const messages = [
-      `Reading ${state}'s licensing guides…`,
+      `Looking up ${state}-specific information…`,
       "Picking the steps that match your situation…",
       "Putting it all together…",
     ];
@@ -245,7 +245,7 @@
     loadingInterval = setInterval(() => {
       i = (i + 1) % messages.length;
       if (loadingStatus) loadingStatus.textContent = messages[i];
-    }, 1100);
+    }, 2400);
 
     if (loadingProgress) {
       loadingProgress.classList.remove("loading__bar-fill--running", "loading__bar-fill--done");
