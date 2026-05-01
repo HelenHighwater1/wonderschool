@@ -1,0 +1,20 @@
+---
+description: Onboard every new agent session by reading the project docs in /docs-project
+alwaysApply: true
+---
+
+# Project Context — Read First
+
+Before doing any meaningful work in this repo, read these four files in order. They are short and define what this project is, how it's built, and the decisions already made.
+
+1. [docs-project/PROJECT.md](mdc:docs-project/PROJECT.md) — what the app is, who it's for, and what it does.
+2. [docs-project/ARCHITECTURE.md](mdc:docs-project/ARCHITECTURE.md) — folder structure, RAG pipeline, models, env vars.
+3. [docs-project/UX.md](mdc:docs-project/UX.md) — the five screens and interaction details.
+4. [docs-project/DECISIONS.md](mdc:docs-project/DECISIONS.md) — running log of product/technical decisions and why they were made.
+
+## Behavior
+
+- Treat `DECISIONS.md` as binding context. Don't propose changes that contradict an existing entry without first surfacing the conflict to the user and asking.
+- When you make any meaningful technical or UX decision while working on this project, append it to `docs-project/DECISIONS.md` with today's date in the existing format (`## [Date] — [Decision Title]`, then **Decision:** and **Reasoning:**) before moving on.
+- When you change anything that affects the architecture, folder structure, models, env vars, or the screen flow, update the relevant doc (`ARCHITECTURE.md` or `UX.md`) in the same change.
+- Never invent state-specific licensing facts. State-specific content must come from RAG retrieval against the `wonderschool_kb` Chroma collection; only general business topics (LLC, pricing, zoning) may use system-prompt knowledge. See `DECISIONS.md` for why.

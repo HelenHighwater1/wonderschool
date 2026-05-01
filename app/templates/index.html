@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Launchpad — Your starting line for a licensed home daycare</title>
+    <meta
+      name="description"
+      content="Answer five quick questions and get a personalized roadmap for opening a licensed home daycare, grounded in Wonderschool's own guides."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <!-- Backdrop accents — capture the warm/organic feel without copying
+           the reference's banner layout. -->
+      <div class="bg-shape bg-shape--coral" aria-hidden="true">
+        <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+          <path
+            fill="currentColor"
+            d="M421.5 91.5c47 38 74 96 86 158s11 128-25 175-105 80-180 87-156-13-202-58-65-117-50-181 65-118 130-150 194-69 241-31z"
+          />
+        </svg>
+      </div>
+      <div class="bg-shape bg-shape--mustard" aria-hidden="true">
+        <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+          <path
+            fill="currentColor"
+            d="M120 60c70-30 160-25 220 20s90 130 80 210-60 150-135 180-170 25-235-25-100-150-80-235S50 90 120 60z"
+          />
+        </svg>
+      </div>
+
+      <header class="brand">
+        <span class="brand__dot" aria-hidden="true"></span>
+        Launchpad
+      </header>
+
+      <!-- Screen 1 — Welcome -->
+      <section
+        id="screen-welcome"
+        class="screen screen--welcome screen--active"
+        aria-labelledby="welcome-headline"
+      >
+        <div class="screen__inner">
+          <p class="eyebrow">For aspiring home daycare educators</p>
+          <h1 id="welcome-headline" class="headline">
+            Your <span class="headline__accent">starting line</span> for a
+            licensed home daycare.
+          </h1>
+          <p class="lede">
+            Opening a licensed home daycare means navigating different rules in
+            every state and a maze of agencies, forms, and conflicting advice.
+            Answer five quick questions and we'll build you a personalized
+            roadmap — in under a minute, grounded in Wonderschool's own guides.
+          </p>
+          <button id="cta-start" class="cta" type="button">
+            <span class="cta__label">Get My Roadmap</span>
+            <span class="cta__arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Screen 2 — Intake -->
+      <section
+        id="screen-intake"
+        class="screen screen--intake"
+        aria-labelledby="intake-heading"
+      >
+        <div class="screen__inner">
+          <div class="form-card">
+            <header class="form-card__header">
+              <h2 id="intake-heading" class="form-card__heading">
+                Tell us about your situation.
+              </h2>
+              <button id="surprise-me" class="surprise-me" type="button">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2.5l1.7 4.6 4.6 1.7-4.6 1.7L12 15.1l-1.7-4.6-4.6-1.7 4.6-1.7zM18.5 13.5l1 2.7 2.7 1-2.7 1-1 2.7-1-2.7-2.7-1 2.7-1zM5.5 15l.7 1.9 1.9.7-1.9.7L5.5 20l-.7-1.7-1.9-.7 1.9-.7z"/>
+                </svg>
+                Surprise Me
+              </button>
+            </header>
+
+            <ol class="questions">
+              <li class="question" data-question="state">
+                <div class="question__label">
+                  <span class="question__num">1</span>
+                  <span class="question__text">What state are you in?</span>
+                </div>
+                <div class="question__answers question__answers--select">
+                  <div class="select">
+                    <select id="answer-state" name="state" aria-label="What state are you in?">
+                      <option value="">Select your state…</option>
+                      <option value="California">California</option>
+                      <option value="Florida">Florida</option>
+                      <option value="Maryland">Maryland</option>
+                      <option value="New York">New York</option>
+                      <option value="North Carolina">North Carolina</option>
+                      <option value="Texas">Texas</option>
+                      <option value="Washington">Washington</option>
+                    </select>
+                    <span class="select__chevron" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </li>
+
+              <li class="question" data-question="home_type">
+                <div class="question__label">
+                  <span class="question__num">2</span>
+                  <span class="question__text">What type of home do you have?</span>
+                </div>
+                <div class="question__answers" role="radiogroup" aria-label="Home type">
+                  <button type="button" class="pill" data-question="home_type" data-value="apartment" role="radio" aria-checked="false">Apartment</button>
+                  <button type="button" class="pill" data-question="home_type" data-value="condo" role="radio" aria-checked="false">Condo</button>
+                  <button type="button" class="pill" data-question="home_type" data-value="single_family" role="radio" aria-checked="false">Single family home</button>
+                  <button type="button" class="pill" data-question="home_type" data-value="other" role="radio" aria-checked="false">Other</button>
+                </div>
+              </li>
+
+              <li class="question" data-question="ages">
+                <div class="question__label">
+                  <span class="question__num">3</span>
+                  <span class="question__text">What ages do you want to serve?</span>
+                </div>
+                <div class="question__answers" role="radiogroup" aria-label="Ages served">
+                  <button type="button" class="pill" data-question="ages" data-value="infants" role="radio" aria-checked="false">Infants</button>
+                  <button type="button" class="pill" data-question="ages" data-value="toddlers" role="radio" aria-checked="false">Toddlers</button>
+                  <button type="button" class="pill" data-question="ages" data-value="preschool" role="radio" aria-checked="false">Preschool</button>
+                  <button type="button" class="pill" data-question="ages" data-value="mixed" role="radio" aria-checked="false">Mixed</button>
+                </div>
+              </li>
+
+              <li class="question" data-question="stage">
+                <div class="question__label">
+                  <span class="question__num">4</span>
+                  <span class="question__text">Where are you in the process?</span>
+                </div>
+                <div class="question__answers" role="radiogroup" aria-label="Stage in the process">
+                  <button type="button" class="pill" data-question="stage" data-value="exploring" role="radio" aria-checked="false">Just exploring</button>
+                  <button type="button" class="pill" data-question="stage" data-value="ready" role="radio" aria-checked="false">Ready to start</button>
+                  <button type="button" class="pill" data-question="stage" data-value="started" role="radio" aria-checked="false">Already started</button>
+                </div>
+              </li>
+
+              <li class="question" data-question="concern">
+                <div class="question__label">
+                  <span class="question__num">5</span>
+                  <span class="question__text">What's your biggest concern?</span>
+                </div>
+                <div class="question__answers" role="radiogroup" aria-label="Biggest concern">
+                  <button type="button" class="pill" data-question="concern" data-value="licensing" role="radio" aria-checked="false">Licensing</button>
+                  <button type="button" class="pill" data-question="concern" data-value="money" role="radio" aria-checked="false">Money</button>
+                  <button type="button" class="pill" data-question="concern" data-value="finding_families" role="radio" aria-checked="false">Finding families</button>
+                  <button type="button" class="pill" data-question="concern" data-value="space" role="radio" aria-checked="false">Setting up my space</button>
+                  <button type="button" class="pill" data-question="concern" data-value="all" role="radio" aria-checked="false">All of it</button>
+                </div>
+              </li>
+            </ol>
+
+            <footer class="form-card__footer">
+              <p class="intake__hint">
+                Only state is required. Leave anything else blank if you'd rather not say.
+              </p>
+              <button id="cta-build" class="cta cta--disabled" type="button" disabled aria-disabled="true">
+                <span class="cta__label">Build My Roadmap</span>
+                <span class="cta__arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </span>
+              </button>
+            </footer>
+          </div>
+        </div>
+      </section>
+
+      <!-- Screen 3 — Loading -->
+      <section
+        id="screen-loading"
+        class="screen screen--loading"
+        aria-busy="true"
+        aria-live="polite"
+        aria-labelledby="loading-status"
+      >
+        <div class="screen__inner">
+          <div class="loading__dots" aria-hidden="true">
+            <span class="loading__dot"></span>
+            <span class="loading__dot"></span>
+            <span class="loading__dot"></span>
+          </div>
+          <p id="loading-status" class="loading__status">
+            Building your personalized roadmap…
+          </p>
+          <div class="loading__bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div id="loading-progress" class="loading__bar-fill"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Screen 4 — Roadmap -->
+      <section
+        id="screen-roadmap"
+        class="screen screen--roadmap"
+        aria-labelledby="roadmap-heading"
+      >
+        <div class="screen__inner">
+          <header class="roadmap__header">
+            <p class="eyebrow">Your roadmap</p>
+            <h2 id="roadmap-heading" class="roadmap__heading">
+              Here's how to get started in <span id="roadmap-state-name"></span>.
+            </h2>
+            <p id="roadmap-recap" class="roadmap__recap"></p>
+          </header>
+          <ol id="step-list" class="step-list"></ol>
+          <footer class="roadmap__footer">
+            <div class="roadmap__actions">
+              <button id="cta-followup" class="cta" type="button">
+                <span class="cta__label">Ask a follow-up question</span>
+                <span class="cta__arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </span>
+              </button>
+              <a
+                id="cta-wonderschool"
+                class="cta cta--secondary"
+                href="https://wonderschool.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Start your program with Wonderschool
+              </a>
+            </div>
+            <button id="cta-start-over" type="button" class="roadmap__start-over">
+              Start over
+            </button>
+          </footer>
+        </div>
+      </section>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+    <!-- Screen 5 — Chat (slide-in panel; roadmap stays visible behind) -->
+    <aside
+      id="chat-panel"
+      class="chat-panel"
+      aria-hidden="true"
+      aria-labelledby="chat-panel-title"
+    >
+      <div class="chat-panel__backdrop" id="chat-backdrop" tabindex="-1"></div>
+      <div class="chat-panel__sheet">
+        <header class="chat-panel__header">
+          <h2 id="chat-panel-title" class="chat-panel__title">Ask a question</h2>
+          <button id="chat-close" type="button" class="chat-panel__close" aria-label="Close chat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </header>
+        <div id="chat-suggestions" class="chat-suggestions" role="group" aria-label="Suggested questions"></div>
+        <div id="chat-messages" class="chat-messages"></div>
+        <form id="chat-form" class="chat-form" autocomplete="off">
+          <label class="visually-hidden" for="chat-input">Your message</label>
+          <input
+            id="chat-input"
+            class="chat-input"
+            type="text"
+            placeholder="Type a question…"
+            maxlength="2000"
+          />
+          <button id="chat-send" type="submit" class="chat-send" aria-label="Send message">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13" />
+              <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </aside>
+
+    <script src="/static/js/app.js"></script>
+  </body>
+</html>

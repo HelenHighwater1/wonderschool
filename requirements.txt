@@ -1,0 +1,10 @@
+requests
+beautifulsoup4
+python-dotenv
+openai
+anthropic
+chromadb
+tiktoken
+fastapi
+uvicorn[standard]
+jinja2

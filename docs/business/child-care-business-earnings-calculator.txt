@@ -1,0 +1,35 @@
+SOURCE: https://www.wonderschool.com/blog/child-care-provider-resources/child-care-business-earnings-calculator
+DATE_SCRAPED: 2026-05-01
+
+Calculate Revenue with this Child Care Enrollments & Tuition Calculator
+By Wonderschool
+By
+Wonderschool
+February 19, 2024
+Are you a child care business owner looking to understand the potential monthly revenue of running a high-quality program? Look no further! We're excited to introduce the Enrollments & Tuition calculator, a handy tool designed to help you estimate your gross monthly earnings with ease.
+‍
+How It Works
+Using the calculator is simple. Just follow these steps:
+Enter the Number of Students:
+Start by entering the number of students you'd like to have in your program in accordance with licensing compliance.
+Enter Your Monthly Tuition Rate:
+Next, input your monthly tuition rate. Whether you're offering new student rates, market rates, or
+value-based pricing
+the choice is yours.
+Explore Market Rates by State:
+Not sure about your pricing? No problem! You can also explore market monthly tuition rates by state to get a better understanding of industry standards. Click on the drop down bar below to see current market rates by state.
+Calculate Your Monthly Gross Income:
+Once you've entered the necessary information, hit the "Calculate" button to see your estimated monthly gross revenue.
+‍
+Get Started
+body { font-family: Arial, sans-serif; margin: 0; padding: 20px; color: #484848; background-color: #f0f0f0; } .container { max-width: 800px; margin: 0 auto; border-radius: 5px; padding: 20px; background-color: #fff; } h1 { font-size: 24px; text-align: center; margin-bottom: 20px; } label { display: block; margin-bottom: 5px; font-size: 16px; } select, input[type="number"] { width: 100%; padding: 10px; margin-bottom: 10px; border: none; border-radius: 5px; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 16px; color: #484848; background-color: #f1f1f1; /* Adjusted color */ } input[type="number"] { -moz-appearance:textfield; } button { width: 100%; padding: 10px; background-color: #4174F5; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-family: Arial, sans-serif; font-size: 16px; } button:hover { background-color: #325aa9; } .result { margin-top: 20px; background-color: #f1f1f1; /* Adjusted color */ padding: 20px; border-radius: 5px; } table { width: 100%; border-collapse: collapse; margin-top: 20px; } table, th, td { padding: 8px; text-align: center; font-family: Arial, sans-serif; font-size: 16px; color: #484848; } th { background-color: #f2f2f2; } #monthlyIncome { font-size: 24px; /* Adjusted font size */ }
+Number of Students: Your Program's Monthly Tuition Rate: 2023 Monthly Market Tuition Rates by State (for reference): Select a state Alabama - $500 - $1,100 Alaska - $1,010 - $1,610 Arizona - $913 - $1,513 Arkansas - $575 - $1,175 California - $1,413 - $2,013 Colorado - $1,278 - $1,878 Connecticut - $1,299 - $1,899 Delaware - $918 - $1,518 Florida - $770 - $1,370 Georgia - $710 - $1,310 Hawaii - $1,145 - $1,745 Idaho - $623 - $1,223 Illinois - $1,151 - $1,751 Indiana - $1,051 - $1,651 Iowa - $865 - $1,465 Kansas - $936 - $1,536 Kentucky - $535 - $1,135 Louisiana - $644 - $1,244 Maine - $788 - $1,388 Maryland - $1,278 - $1,878 Massachusetts - $1,743 - $2,343 Michigan - $906 - $1,506 Minnesota - $1,341 - $1,941 Mississippi - $454 - $1,054 Missouri - $838 - $1,438 Montana - $837 - $1,437 Nebraska - $1,058 - $1,658 Nevada - $1,065 - $1,665 New Hampshire - $1,065 - $1,665 New Jersey - $1,083 - $1,683 New Mexico - $1,066 - $1,666 New York - $1,099 - $1,699 North Carolina - $1,283 - $1,883 North Dakota - $791 - $1,391 Ohio - $790 - $1,390 Oklahoma - $808 - $1,408 Oregon - $829 - $1,429 Pennsylvania - $713 - $1,313 Rhode Island - $1,014 - $1,614 South Carolina - $886 - $1,486 South Dakota - $716 - $1,316 Tennessee - $1,142 - $1,742 Texas - $791 - $1,391 Utah - $544 - $1,144 Vermont - $1,048 - $1,648 Virginia - $882 - $1,482 Washington - $1,068 - $1,668 Calculate
+Monthly Gross Income:
+‍
+Keep Growing and Learning With Us!
+We hope you find the this calculator helpful in your journey as a child care business owner. If you'd like to go further and explore your net earning potential check out the
+Wonderschool Child Care Calculator.
+Having full enrollments and intentional pricing strategies is key to your success so we recommend playing with different enrollments and understanding what pricing works best for your business. If you'd like to learn more click
+here
+.
+‍
