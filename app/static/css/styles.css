@@ -154,6 +154,10 @@ a {
   font-size: 15px;
   letter-spacing: 0.02em;
   color: var(--plum);
+  background: rgba(251, 245, 237, 0.82);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  border-bottom: 1px solid var(--line);
 }
 
 .brand__left {
@@ -897,36 +901,51 @@ a {
 
 .step-card__meta {
   display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  gap: 8px;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: 4px;
+  min-width: 0;
 }
 
 .step-card__cite {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--coral);
+  flex: 1 1 auto;
+  min-width: 0;
+  display: inline-block;
+  max-width: 100%;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text-soft);
   text-decoration: underline;
-  text-decoration-thickness: 2px;
+  text-decoration-color: rgba(224, 122, 111, 0.55);
+  text-decoration-thickness: 1.5px;
   text-underline-offset: 3px;
-  padding: 4px 10px;
-  border-radius: var(--radius-pill);
-  border: 1px solid rgba(224, 122, 111, 0.35);
-  background: rgba(224, 122, 111, 0.08);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.step-card__cite::before {
+  content: "Source — ";
+  color: var(--text-soft);
+  text-decoration: none;
 }
 
 .step-card__cite:hover {
-  background: rgba(224, 122, 111, 0.18);
+  color: var(--coral);
+  text-decoration-color: var(--coral);
 }
 
 .step-card__badge {
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 12.5px;
+  font-weight: 500;
   color: var(--text-soft);
-  padding: 4px 10px;
-  border-radius: var(--radius-pill);
-  border: 1px dashed var(--line-strong);
-  background: rgba(251, 245, 237, 0.6);
+  font-style: italic;
+  padding: 0;
+  border: 0;
+  background: transparent;
 }
 
 .roadmap__footer {
@@ -1268,6 +1287,41 @@ a {
    ========================================================================= */
 
 @media (max-width: 720px) {
+  .brand {
+    position: static;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 16px 22px 12px;
+    font-size: 13px;
+  }
+
+  .brand__left {
+    flex-wrap: wrap;
+  }
+
+  .brand__links {
+    font-size: 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .bg-shape {
+    position: absolute;
+  }
+
+  .screen {
+    padding: 24px 22px 56px;
+  }
+
+  .screen--intake {
+    padding: 16px 18px 32px;
+  }
+
+  .screen--roadmap {
+    padding: 16px 22px 56px;
+  }
+
   .question {
     grid-template-columns: 1fr;
     gap: 8px;
@@ -1317,28 +1371,17 @@ a {
 }
 
 @media (max-width: 540px) {
-  .brand {
-    top: 20px;
-    left: 22px;
-  }
-
-  .screen {
-    padding: 80px 22px 56px;
-  }
-
-  .screen--intake {
-    padding: 80px 18px 32px;
-  }
-
   .bg-shape--coral {
-    width: 320px;
-    top: -100px;
-    right: -120px;
+    width: 220px;
+    top: -80px;
+    right: -90px;
+    opacity: 0.6;
   }
 
   .bg-shape--mustard {
-    width: 280px;
-    bottom: -180px;
-    left: -140px;
+    width: 200px;
+    bottom: -120px;
+    left: -100px;
+    opacity: 0.55;
   }
 }
