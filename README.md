@@ -2,13 +2,13 @@
 
 ## Why I built this
 
-I saw the Early Career Software Engineer - Applied AI role and wanted to show you how I think about a real problem in your product, not just a generic coding sample. So I built this over a couple of days. It is a functional demo of a high-value moment in your funnel: the aspiring home daycare educator who has not yet become a provider and is trying to figure out if getting licensed is even possible for them.
+I saw the Early Career Software Engineer - Applied AI role and am so excited about it, I wanted to do something to stand out. So I built this demo today. It is a functional demo of a high-value moment in your funnel: the aspiring home daycare educator who has not yet become a provider and is trying to figure out if getting licensed is even possible for them.
 
 ## What it does
 
-The user answers five intake questions: what state they're in, what type of home they have, what ages they want to serve, where they are in the process, and what worries them most. The app builds a personalized licensing and business roadmap - five or six named steps - grounded in Wonderschool's own blog content. Each step cites the source article it came from. From the roadmap, the user can open a slide-in chat panel to ask follow-up questions, or click straight through to start a program with Wonderschool.
+The user answers five intake questions, and the app builds a personalized licensing and business roadmap - five or six named steps.  The data is from Wonderschool's own blog content. Each step cites the source article it came from. From the roadmap, the user can open a slide-in chat panel to ask follow-up questions, or click straight through to start a program with Wonderschool.
 
-Everything is grounded. The LLM is instructed to answer only from what was retrieved — it does not invent state-specific licensing facts. If a user asks about Texas capacity rules, the answer comes from the Texas article in the corpus, not from the model's training weights.
+The LLM is instructed to answer only from what was retrieved — it does not invent state-specific licensing facts. If a user asks about Texas capacity rules, the answer comes from the Texas article in the corpus, not from the model's training weights.
 
 ## Why these technical choices
 
